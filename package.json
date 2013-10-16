@@ -1,0 +1,14 @@
+{
+  "name": "XeLaTeX-watch",
+  "version": "0.1.0",
+  "dependencies": {
+    "grunt-shell": "~0.4.0",
+    "grunt-cli": "~0.1.9",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.1",
+    "grunt-contrib-connect": "~0.5.0"
+  },
+  "scripts": {
+    "start": "grunt"
+  }
+}

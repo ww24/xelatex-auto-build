@@ -1,0 +1,69 @@
+\documentclass[a4paper]{article}
+\title{\XeLaTeX Auto Build}
+\author{Takenori Nakagawa}
+\date{2013/10/16}
+
+% \usepackage{listings,jlisting}
+% \lstset{
+%   basicstyle=\ttfamily\scriptsize,
+%   frame=single
+% }
+
+% \usepackage{here}
+
+% \usepackage{geometry}
+% \usepackage[showframe]{geometry}
+% \geometry{
+%   top=25mm,
+%   left=20mm,
+%   right=15mm,
+%   bottom=15mm
+% }
+
+% \usepackage{titling}
+% \setlength{\droptitle}{-14mm}
+
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{zxjatype}
+\setjamainfont{ipaexm.ttf}
+\setjasansfont{ipaexg.ttf}
+\setjamonofont{ipaexg.ttf}
+\XeTeXlinebreaklocale "ja"
+
+\begin{document}
+\maketitle
+% \fontsize{11pt}{15pt}\selectfont
+
+\begin{abstract}
+\center
+This provides an environment to automatically build \XeLaTeX by Node.js.
+\end{abstract}
+
+\section{Features}
+\begin{itemize}
+  \item Generate from LaTeX to PDF (require xelatex command)
+  \item HTTP Server \& Livereload
+\end{itemize}
+
+\section{How to Start}
+\begin{itemize}
+  \item {\tt npm install}
+  \item {\tt npm start}
+  \item save {\tt src/report.tex}
+  \item open {\tt http://localhost:8000/report.pdf}
+\end{itemize}
+
+\section{Directory}
+\begin{description}
+  \item[dest]\mbox{}\\
+  Directory where the PDF will be outputted.
+
+  \item[documents]\mbox{}\\
+  This directory to store the completed report. (not reference)
+
+  \item[src]\mbox{}\\
+  Directory where the \XeLaTeX source put. (require to be {\tt .tex} file extension)
+\end{description}
+
+\end{document}
